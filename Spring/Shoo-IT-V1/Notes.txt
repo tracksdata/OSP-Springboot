@@ -1,0 +1,62 @@
+billing-service
+------------------------
+- data/model
+- layers
+	a. data/repositary layer => presistence logic
+	b. service layer => processing logic
+	c. web layer /client =/. request & response logic
+	...
+
+ 1. PriceMatric
+ 		- getPrice(itemCode)
+ 2. Billing
+ 		- getTotalPrice(cart)
+ 
+-------------------------------------------------
+
+
+ ---------------------------------------------
+	 *  design & performance issues
+	 *  ------------------------------
+	 *  
+	 *  -> dependent & dependency are tight coupled
+	 *  	=> module can't extent with new features easily.
+	 *  
+	 *  -> too many dependency class objects / many duplicate instances are created 
+	 *  	=> slow, memory leak / resource use is high
+	 *  
+	 *  -> unit-testing not possible
+	 *  	=> dev & bug fix slow
+	 *  
+	 *  ---------------------------------------------------------------
+	 *  
+	 *  => why these issues happened?
+	 *   
+	 *  	-> dependent itself creating its own dependency class objects
+	 *  
+	 *   => What is the solution?
+	 *   
+	 *   	-> do not create dependency object in the dependent.
+	 *      -> don't create, use factory lookup => JNDI 
+	 *      
+	 *    limitation on factory-lookup
+	 *    	=> factory location tight coupling
+	 *    
+	 *    what is the best solution?
+	 *    -------------------------------
+	 *    => don't create/lookup, get/inject by 'third-party' container (IoC )=> Inversion of control)
+	 *    
+	 *      
+	 *   What is Dependency Injection?
+	 *   --------------------------------
+	 *   => Injecting Dependency to dependent.
+	 *   
+	 *   How Can I Implement DI?
+	 *   ------------------------
+	 *   2 ways
+	 *   	1=> by using constructor based injection
+	 *   	2=> by using setter based injection
+	 *   
+	 *   
+	 *   
+	 */
