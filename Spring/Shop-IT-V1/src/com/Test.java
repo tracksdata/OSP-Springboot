@@ -15,6 +15,7 @@ public class Test {
 		
 		PriceMatrix price=new PriceMatrixImpl(); // dependency object
 		
+		
 		//---------------------------------------------------
 
 		BillingImpl biller = new BillingImpl(); // dependent object
