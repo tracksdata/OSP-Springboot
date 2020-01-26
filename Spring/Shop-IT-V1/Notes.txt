@@ -2,9 +2,9 @@ billing-service
 ------------------------
 - data/model
 - layers
-	a. data/repositary layer => presistence logic
+	a. data/repository layer => persistence logic
 	b. service layer => processing logic
-	c. web layer /client =/. request & response logic
+	c. web layer /client =request & response logic
 	...
 
  1. PriceMatric
