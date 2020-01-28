@@ -43,6 +43,7 @@ public class BillingImpl {
 		System.out.println("Scope: "+scopeValue);
 	}
 
+
 	public double getTotalPrice(String[] cart) {
 
 		double total = 0.0;

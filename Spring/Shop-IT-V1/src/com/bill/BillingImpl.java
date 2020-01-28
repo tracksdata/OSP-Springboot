@@ -4,7 +4,7 @@ import com.pricematrix.PriceMatrix;
 import com.pricematrix.PriceMatrixImpl;
 
 //Dependent 
-public class BillingImpl {
+public class BillingImpl implements Billing {
 	
 	/*
 	 *  ------------------------------
@@ -59,12 +59,14 @@ public class BillingImpl {
 	
     // setter
 	
+	@Override
 	public void setPrice(PriceMatrix price) {
 		this.price = price;
 	}
 
 
 
+	@Override
 	public double getTotalPrice(String[] cart) {
 	
 

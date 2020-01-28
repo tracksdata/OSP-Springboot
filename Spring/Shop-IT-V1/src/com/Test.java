@@ -1,5 +1,6 @@
 package com;
 
+import com.bill.Billing;
 import com.bill.BillingImpl;
 import com.pricematrix.PriceMatrix;
 import com.pricematrix.PriceMatrixImpl;
@@ -18,7 +19,7 @@ public class Test {
 		
 		//---------------------------------------------------
 
-		BillingImpl biller = new BillingImpl(); // dependent object
+		Billing biller = new BillingImpl(); // dependent object
 		
 		biller.setPrice(price); // DI => Injecting Dependency object to the dependent object
 	   //--------------------------------------------------------------------------------
