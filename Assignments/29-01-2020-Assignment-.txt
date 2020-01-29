@@ -1,0 +1,25 @@
+EmployeeDaoImpl
+5 methods
+boolean saveEmployee(Employee emp);
+Employee findById(String empId);
+List<Employee> findByName(String empName);
+List<Employee> findAll();
+boolean deleteById(String empId);
+
+Two diffent service classes : EmployeeDaoImpl
+1. EmployeeServiceReadOnlyImpl
+			  -> findAll()
+			  -> findById(String empId)
+			  -> findByName(String empName)
+2. EmployeeServiceImpl
+			-> saveEmployee(Employee employee)
+			-> deleteById(String empId);
+			-> findAll()
+			 -> findById(String empId)
+			 -> findByName(String empName)
+	
+-----------------------------------------------
+Test / Controller 
+EmployeeServiceReadOnlyImpl : 3
+EmployeeServiceImpl : 5 
+
