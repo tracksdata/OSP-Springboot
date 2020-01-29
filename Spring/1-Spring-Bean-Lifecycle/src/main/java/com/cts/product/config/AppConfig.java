@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 	
+	public AppConfig() {
+		System.out.println("1. AppConfig object created on hash code: " + System.identityHashCode(this));
+	}
 
 	@PreDestroy
 	public void f4() {
@@ -22,10 +25,6 @@ public class AppConfig {
 	@Bean
 	public void f2() {
 		System.out.println("3. Bean method");
-	}
-
-	public AppConfig() {
-		System.out.println("1. AppConfig object created on hash code: " + System.identityHashCode(this));
 	}
 
 	@PostConstruct
