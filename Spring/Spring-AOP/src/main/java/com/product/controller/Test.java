@@ -14,6 +14,7 @@ public class Test {
 
 		AbstractApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 		ProductServiceImpl ps = ac.getBean(ProductServiceImpl.class);
+	
 		ps.findById("P001");
 		ps.findByName("Pen");
 
