@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.cts.product.model.Product;
 
@@ -28,6 +29,7 @@ public class ProductDaoImpl {
 	 * 3. RowMapper
 	 */
 
+	
 	public List<Product> findAll() {
 		
 		List<Product> prods=  jt.queryForObject("select * from product", new RowMapperDemo());
