@@ -27,9 +27,15 @@ public class ProductDaoImpl implements ProductDao {
 	
 
 	public void saveProduct(Product prod) {
+		System.out.println("DAO: SAVE Product:===> "+System.identityHashCode(prod));
+
+		System.out.println("Save: Transaction:==>  "+sf.getCurrentSession().getTransaction());
 		Session ses=sf.getCurrentSession();
 		ses.save(prod);
-	//	ses.beginTransaction().commit();
+		
+		
+		
+	
 	}
 	
 	
@@ -53,8 +59,14 @@ public class ProductDaoImpl implements ProductDao {
 	}
 	
 	public Object updateProduct(Product newProduct) throws RuntimeException {
+		System.out.println("Product ID=======> "+newProduct.getProductId());
+		System.out.println("DAO: UPDATE Product:===> "+System.identityHashCode(newProduct));
+
+		System.out.println("Update: Transaction:==>  "+sf.getCurrentSession().getTransaction());
+
 		
-		if(newProduct.getProductId()==1) {
+		if(newProduct.getProductId()==1000) {
+			System.out.println("--->>>>>>> In Exception");
 			throw new RuntimeException("Product Id can not be updated");
 		}
 		

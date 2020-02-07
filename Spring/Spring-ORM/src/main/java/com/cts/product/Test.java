@@ -15,7 +15,7 @@ public class Test {
 	
 		AbstractApplicationContext ac=new AnnotationConfigApplicationContext(AppConfig.class);
 		
-		ProductSerrvice dao=ac.getBean(ProductSerrvice.class);
+		ProductSerrvice ps=ac.getBean(ProductSerrvice.class);
 		/*
 		for(Product prod:dao.findByName("%a")) {
 			System.out.println(prod.getProductId());
@@ -27,13 +27,25 @@ public class Test {
 		*/
 		
 		Product prod=new Product();
-		prod.setProductId(1997);
+		prod.setProductId(2003);
 		prod.setProductName("Blue Pen");
 		prod.setPrice(45.45);
 		
-		dao.saveProduct(prod);
 		
 		
+		ps.saveProduct(prod); // New Transaction
+	
+		Product p=new Product();
+		p.setProductId(1);
+		p.setProductName("Cap");
+		p.setPrice(32);
+		
+		//System.out.println("Service:===> "+System.identityHashCode(p));
+	  	ps.updateProduct(p); // runs in a new Transaction
+		
+		
+		
+	
 	/*
 		//dao.updateProduct(prod);
 		Product updatedProduct=(Product)dao.updateProduct(prod);

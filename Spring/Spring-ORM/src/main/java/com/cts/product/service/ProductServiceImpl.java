@@ -22,22 +22,21 @@ public class ProductServiceImpl implements ProductSerrvice {
 		// TODO Auto-generated method stub
 		return prodDao.findAll();
 	}
+	
+	
+	
+	
+	
+	
+	
 
 	@Override
-	@Transactional
+	@Transactional // Required
 	public void saveProduct(Product prod) throws RuntimeException {
 		// step -1 - save Product
 		prodDao.saveProduct(prod); // step -1
-		// step -2 update given product
-		
-		Product p=new Product();
-		p.setProductId(1);
-		p.setProductName("New Prod");
-		p.setPrice(10);
+		prodDao.updateProduct(new Product());
 	
-		prodDao.updateProduct(p); // step-2
-		
-		// if update is successful then only save product
 		
 	}
 
@@ -56,14 +55,14 @@ public class ProductServiceImpl implements ProductSerrvice {
 	}
 
 	@Override
-	@Transactional
+	@Transactional // Required
 	public Object updateProduct(Product newProduct) throws RuntimeException {
 		
 		// TODO Auto-generated method stub
-		Product prod=findById(newProduct.getProductId());
-		if(prod==null) {
-			return null;
-		}
+	//	Product prod=findById(newProduct.getProductId());
+		//if(prod==null) {
+		//	return null;
+		//}
 		
 		return prodDao.updateProduct(newProduct);
 	}
