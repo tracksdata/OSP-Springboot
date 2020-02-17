@@ -22,7 +22,7 @@ import com.cts.product.entity.Product;
 @Configuration
 @PropertySource("classpath:application.properties")
 @EnableTransactionManagement
-@ComponentScans(value = { @ComponentScan("com.cts.product.service"), @ComponentScan("com.cts.product.dao") })
+@ComponentScans(value = { @ComponentScan("com.cts.product.service"), @ComponentScan("com.cts.product.dao")})
 public class AppConfig {
 
 

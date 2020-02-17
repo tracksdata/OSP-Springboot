@@ -1,5 +1,7 @@
 package com.cts.product.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +21,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Transactional
 	public void saveEmployee(Employee emp) {
 		empDao.saveEmployee(emp);
+	}
+
+
+	@Transactional
+	@Override
+	public List<Employee> findAll() {
+		// TODO Auto-generated method stub
+		return empDao.findAll();
 	}
 	
 	

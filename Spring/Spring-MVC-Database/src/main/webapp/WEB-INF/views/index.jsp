@@ -12,6 +12,8 @@
 <h2>
 <a href="loadForm">Add Employee</a>
 </h2>
-
+<h2>
+<a href="findAll">ListEmployees</a>
+</h2>
 </body>
 </html>

@@ -1,0 +1,147 @@
+Web Services
+
+WS technologies
+---------------------------
+	XSD
+	SOAP
+	WSDL
+	HTTP
+	UDDI
+
+WS APIs & Frameworks
+----------------------------------
+	AXIS2 API
+	JAX-RPC  API
+	JAX-WS API
+	JAX-RS	API
+	Spring with Rest API
+	Apache CXF Framework
+
+Messaging Styles
+	document
+	rpc
+
+Encoding Styles
+	soap encoding
+	literal encoding
+
+WSDL styling
+	document /literal
+	rpc/literal
+
+----------------------------------------------
+
+Architecture style (http binding / xml binding )
+	soap style ( JAX -WS)
+	rest style.  (JAX-RS) 😊
+
+-----------------------------------------------------
+
+Web Services tools
+	Axis2 
+		-> wsdl2java
+		->java2wsdl
+	JAX-RPC
+		-> wscompile
+		-> wsdeploy
+	JAXB
+		-> xjc
+		-> schemagen
+	
+	JAX-WS
+		-> wsimport
+		-> wsgen
+
+---------------------------------------------------------------
+
+  JAX RS API
+------------------------
+1) JAX-RS Spec
+			- SUN
+			-.pdf (JSR -311)
+			-description 
+
+2) JAX-RS API
+			- SUN
+			-  mostly contains classes, interfaces .. etc
+			- javax.ws.rs package
+			- javax.ws.rs.core
+			- javax.ws.rs.ext package
+
+3) JAX-RS Implementations 
+			- mostly third party vendors like Apcahe, Sun, JBoss
+			- Apache CXF (Apache )
+			- Jercy (sun)
+			- Rest Easy (jboss)
+	
+-------------------------------------------------------------------
+REST API
+	1. JAX-RS implementations
+	2. Spring with Rest API
+	3. Wicket
+
+
+	2. Spring with Rest API
+-----------------------------------------------------------------------
+	=> HTTP methods (GET, PUT,POST, DELETE)
+	=> HTTP status codes
+				1x  ==> 100 - 199 -> Informative 
+				2x	==> 200 - 299 -> Success 
+				3x	==> 300 -	399 -> redirections 
+				4x	==> 400 - 499 -> client side error
+				5x  ==> 500 - 599 -> server side errors
+
+------------------------------------------------------------------------
+
+Core terms in Spring rest API
+--------------------------------------------
+1. URL naming rules
+2. Rest end point urls
+3. Request body headers
+4. Response body headers
+5. HTTP methods and status codes
+6. ACCEPT content type. (Text/html, json, xml .. etc)
+7. Response types 
+
+
+Example application  (Shoping cart app/ ecart app )
+-------------------------------------------------------------------------
+1. Admin module 
+			-> ADD/MODIFY/DELETE product
+			-> Add / remove menus
+			-> managing user profiles
+			-> repors for orders
+
+2. cart
+3. order
+
+
+===============================================
+
+
+@RestContoller
+		==> @Controller
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,28 +1,29 @@
 package com.cts.product.entity;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
+
 @Entity
+
 public class Employee {
 	
 	@Id
 	private int empId;
 	private String empName;
 	private double salary;
-	@Temporal(TemporalType.DATE)
-	private LocalDate dob;
+	private Date dob;
 	
-
-	
-	public LocalDate getDob() {
+	public Date getDob() {
+		System.out.println("------ getter DOB >>>");
 		return dob;
 	}
-	public void setDob(LocalDate dob) {
-		this.dob = dob;
+	public void setDob(Date dob) {
+	System.out.println("------ setter DOB   >>>");
+	this.dob=dob;
 	}
 	public int getEmpId() {
 		return empId;

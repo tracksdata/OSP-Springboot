@@ -1,7 +1,12 @@
 package com.cts.product.controller;
 
+
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -21,6 +26,14 @@ public class ProductController {
 	}
 	
 	
+	// List all employees from DB
+	
+	@RequestMapping("/findAll")
+	public String findAll(Model empData) {
+		List<Employee> emps=es.findAll();
+		empData.addAttribute("employees", emps);
+		return "employees";
+	}
 	
 	// load employee dform 
 	
@@ -29,15 +42,10 @@ public class ProductController {
 		return "employeeform";
 	}
 	
-
-	
 	@RequestMapping("saveEmployee")
-	public void saveEmployee(@ModelAttribute Employee emp) {
-		
-		
-	
+	public void saveEmployee(@ModelAttribute("emp") Employee emp) {
+	   System.out.println("--- Controller");
 		es.saveEmployee(emp);
-		
 		
 	}
 	
