@@ -1,0 +1,118 @@
+====================================================
+POST a order to Specific user
+Method Type: POST
+URL: http://localhost:3000/api/orders/user2
+JSON BODY
+{
+   "order_id":9,
+   "address_id":3,
+   "item":{
+   	 "id":176,
+   	 "name":"mobile",
+   	 "price":10000
+   },
+   "quantity":23
+
+}
+
+Display Orders for all users
+Method Type: GET
+URL: http://localhost:3000/api/orders
+
+Display Orders for Specific User 
+Method Type: GET
+URL: http://localhost:3000/api/orders/user1
+
+========================================================
+Load Cart Items for a specific user
+Method Type: GET
+URL: http://localhost:3000/api/cart/user1
+
+Post spicific user to cart
+Method Type: POST
+URL: http://localhost:3000/api/cart/user1
+JSON BODY
+{
+	"id":"12",
+	"name":"JTA Transaction Manager",
+	"description":"Java Transaction Management",
+	"quantity":6,
+	"price":5000
+}
+
+=============================================================
+Saving a new Product
+Method: POST
+URL: http://localhost:3000/api/products/
+JSON BODY
+  {
+        "product_id": 1,
+        "date": "2020-02-10T18:30:00.000Z",
+        "description": "Sony Remote Controller",
+        "image": "sony-remote.jpeg",
+        "name": "Sony Remore Controller",
+        "price": 3500,
+        "category_id": 6,
+        "brand_name": "Sony"
+  }
+
+  Displaying all products
+  Method : GET
+  URL : http://localhost:3000/api/products/
+
+  Finding a product by id
+  Method : GET
+  URL : http://localhost:3000/api/products/1
+
+  Finding Products by product name
+  Method: GET
+  URL : http://localhost:3000/api/products/byname/Pen
+
+
+ Updating an existing product by id
+ Method: PUT
+ URL: http://localhost:3000/api/products/1
+ JSON BODY
+    {
+        "product_id": 1,
+        "date": "2018-08-12",
+        "description": "Samsung TV Remote Controller",
+        "image": "remote.jpeg",
+        "name": "Samsung Remote Controller",
+        "price": 4700
+    }
+
+Deleting a product by id
+  Method : DELETE
+  URL : http://localhost:3000/api/products/1
+
+Loading reviews for a specific Product
+Method: GET
+URL:  http://localhost:3000/api/products/3/reviews
+
+Posting a new Review for a Product
+Method: POST
+URL: http://localhost:3000/api/products/1/reviews
+JSON BODY
+ {
+        "id": 1031,
+        "author": "user1",
+        "body": "Quality of Remote is not good",
+        "stars": 2,
+        "product_id": 1
+}
+
+
+Updating an existing Review for a given Product
+Method: PUT
+URL: http://localhost:3000/api/products/1/reviews
+JSON BODY
+{
+    "id": 1031,
+    "author": "user1",
+    "body": "Changing from 2 starts to 1 star after 6 months usage. Very bad quality",
+    "stars": 1,
+    "product_id": 1
+}
+
+

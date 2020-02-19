@@ -69,7 +69,7 @@ Web Services tools
 			- javax.ws.rs.ext package
 
 3) JAX-RS Implementations 
-			- mostly third party vendors like Apcahe, Sun, JBoss
+			- mostly third party vendors like Apache, Sun, JBoss
 			- Apache CXF (Apache )
 			- Jercy (sun)
 			- Rest Easy (jboss)
