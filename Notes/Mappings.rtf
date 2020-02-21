@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh21000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs96 \cf0 Mappings \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+EmpId	(pk)		deptId(fk)\
+10						    1024\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+One to one \
+Employee\
+ @OneToOne\
+ @JoinColoumn(name=\'93deptId\'94)\
+ Private Department dept;\
+	empId - PK\
+Department\
+	deptId - PK\
+\
+===============================================\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 EmpId	(pk)		deptId(MUL)\
+10						    1024\
+11								1024\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+ManyToOne\
+Employee\
+ @ManyToOne\
+ @JoinColoumn(name=\'93deptId\'94)\
+ Private Department dept;\
+	empId - PK\
+Department\
+	deptId - PK\
+=================================================\
+OneToMany (Collection API)\
+Note: 3 tables mandatory \
+Employee\
+EmpId	\
+10\
+11\
+12\
+13\
+\'97\'97\'97\'97\'97\
+Department \
+Deptid\
+1024\
+1025\
+\'97\'97\'97\'97\'97\'97-\
+dept_info\
+\'97\'97\'97\'97\'97\'97\'97\
+deptId	(FK)	empId (MUL with Unique Constraint)\
+1024							10\
+1024							11\
+1024							12\
+1025							13\
+1025							10 (wrong entry, because 10 already mapped to 1024)\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Department\
+@OneToMany(cascade=ALL, fetch - eager)\
+@JoinTable(name=\'93dept_info\'94,@JoinColums=\{@JoinColoumn(name=\'93deptid\'94)\},@InverseJoinColumn(name=\'93empid\'94)\})\
+List<Employee> emps=new ArrayList();\
+\
+====================================\
+Patient\
+patid		patname\
+10					P1\
+11					P2\
+12					P3\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Doctor\
+docid		docname\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1						D1\
+2						D2\
+\
+MANY TO MANY\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Doctor\
+@ManyToMany(cascade=ALL, fetch - eager)\
+@JoinTable(name=\'93pat_info\'94,@JoinColums=\{@JoinColoumn(name=\'93docid\'94)\},@InverseJoinColumn(name=\'93patid\'94)\})\
+List<Patient> patiemts=new ArrayList();\
+\
+pat_info\
+\'97\'97\'97\'97\'97\'97\
+docid		patid\
+D1				P1\
+D1				P2\
+D1				P3\
+D2			  P2\
+D2				P1\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+}
