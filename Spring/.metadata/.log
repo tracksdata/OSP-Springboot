@@ -7999,3 +7999,27 @@ Caused by: java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git
 	at java.io.FileInputStream.<init>(FileInputStream.java:93)
 	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:181)
 	... 75 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-02-21 11:30:23.835
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-02-21 11:30:23.836
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-02-21 11:30:23.881
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-02-21 11:30:23.883
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-24 09:42:46.080
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XdUhuHxy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-24 09:42:46.081
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.XdUhuHxy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-24 09:42:46.081
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-24 09:42:46.081
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.XdUhuHxy => OK
