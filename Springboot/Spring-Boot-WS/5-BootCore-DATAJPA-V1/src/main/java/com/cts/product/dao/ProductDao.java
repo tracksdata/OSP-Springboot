@@ -22,8 +22,8 @@ public interface ProductDao extends JpaRepository<Product, Integer> {
 	List<Product> findAllLaptops(String filterString);
 
 	
-	@Query("update Product set p.productName=?,p.price=?,p.productDate where p.productId=?")
-	void updateProduct(Product prod);
+	//@Query("update Product set p.productName=?,p.price=?,p.productDate where p.productId=?")
+	//void updateProduct(Product prod);
 	
 	
 	
