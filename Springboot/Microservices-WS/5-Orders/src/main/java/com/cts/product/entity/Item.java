@@ -7,6 +7,8 @@ public class Item implements Serializable {
 	private int id;
 	private String name;
 	private double price;
+	private double itemTotal;
+	
 	
 	public Item() {
 		// TODO Auto-generated constructor stub
@@ -17,6 +19,16 @@ public class Item implements Serializable {
 		this.id = id;
 		this.name = name;
 		this.price = price;
+	}
+	
+	
+
+	public double getItemTotal() {
+		return itemTotal;
+	}
+
+	public void setItemTotal(double itemTotal) {
+		this.itemTotal = itemTotal;
 	}
 
 	public int getId() {

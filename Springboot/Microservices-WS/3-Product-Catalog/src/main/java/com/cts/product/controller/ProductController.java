@@ -31,6 +31,10 @@ public class ProductController {
 		return ps.findAll();
 	}
 
+	@GetMapping("/{id}")
+	public Product findbyId(@PathVariable int id) {
+		return ps.finfById(id);
+	}
 	@GetMapping("/{id}/reviews")
 	public List<Review> getReviews(@PathVariable int id) {
 		return ps.findReviewsByProduct(id);

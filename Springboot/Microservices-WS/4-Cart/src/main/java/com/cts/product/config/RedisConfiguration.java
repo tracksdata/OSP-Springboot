@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import com.cts.product.entity.ItemLine;
 
@@ -19,6 +20,8 @@ public class RedisConfiguration {
 	public RedisTemplate<String, ItemLine> redisTemplate() {
 		final RedisTemplate<String, ItemLine> template = new RedisTemplate<String, ItemLine>();
 		template.setConnectionFactory(jedisConnectionFactory());
+		 template.setKeySerializer(new StringRedisSerializer());
+	    // template.setValueSerializer(new StringRedisSerializer());
 		return template;
 	}
 

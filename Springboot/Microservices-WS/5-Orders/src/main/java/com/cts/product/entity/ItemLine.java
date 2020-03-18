@@ -2,12 +2,8 @@ package com.cts.product.entity;
 
 import java.io.Serializable;
 
-public class ItemLine implements Serializable {
+public class ItemLine {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private Item item;
 	private int qty;
 	

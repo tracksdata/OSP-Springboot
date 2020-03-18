@@ -28,6 +28,9 @@ public class CartController {
 		System.out.println("========> " + itemLine.getItem().getName());
 		System.out.println("===> Quantity: " + itemLine.getQty());
 		System.out.println("====> User: " + user);
+		
+		itemLine.getItem().setItemTotal(itemLine.getQty()*itemLine.getItem().getPrice());
+		System.out.println("Toatl=======> "+itemLine.getItem().getItemTotal());
 		return cartRepository.save(user, itemLine);
 	}
 
