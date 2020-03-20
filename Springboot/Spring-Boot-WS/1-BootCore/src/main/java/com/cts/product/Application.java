@@ -21,9 +21,6 @@ public class Application {
 		ProductDao prod=ac.getBean(ProductDao.class);
 		prod.saveProduct();
 		
-		
-		
-		
 	}
 
 }

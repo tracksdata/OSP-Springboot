@@ -39,7 +39,7 @@ public class OrderController {
 		System.out.println("=======> user Info: " + user);
 
 		String url = "http://localhost:8081/api/cart/" + user;
-		System.out.println("Feting cart data from "+url);
+		System.out.println("Feting cart data from " + url);
 
 		RestTemplate restTemplate = new RestTemplate(); // Micro Service inter Communication
 
@@ -53,7 +53,7 @@ public class OrderController {
 			System.out.println(itemLine.getItem().getName());
 			System.out.println(itemLine.getItem().getPrice());
 			System.out.println(itemLine.getQty());
-			System.out.println("Total for this Item: "+itemLine.getQty()*itemLine.getItem().getPrice());
+			System.out.println("Total for this Item: " + itemLine.getQty() * itemLine.getItem().getPrice());
 			System.out.println("-----------------------------------");
 
 		}
@@ -65,14 +65,16 @@ public class OrderController {
 
 		order.setDate(LocalDateTime.now());
 		// User userName=orderRepository.findUserByUser(user);
+
 		User userName = new User();
-		userName.setUserId("abc");
+		userName.setUserId(user);
 		userName.setPassword("password1$");
-		userName.setUserRole("user");
-		// order.setUser(userName);
+		userName.setUserRole("user-role");
+		order.setUser(userName);
+
 		order.setAmount(totalAmount);
 
-		 Order savedOrder = orderRepository.save(order);
+		Order savedOrder = orderRepository.save(order);
 		restTemplate.delete(url);
 
 		return savedOrder;// savedOrder;

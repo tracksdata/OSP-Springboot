@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Employee {
-	
 	@Autowired
 	Environment env;
 
@@ -16,5 +15,4 @@ public class Employee {
 		System.out.println("--- Employee test class");
 		System.out.println("Name: "+env.getProperty("name"));
 	}
-
 }

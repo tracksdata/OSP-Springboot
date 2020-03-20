@@ -28,4 +28,10 @@ public class ProductServiceImpl implements ProductService {
 		return prodDao.findById(id).orElse(null);
 	}
 
+	@Override
+	public List<Product> findProductByNameLike(String name) {
+		// TODO Auto-generated method stub
+		return prodDao.findProductByNameLike(name);
+	}
+
 }

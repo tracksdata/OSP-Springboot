@@ -30,6 +30,12 @@ public class ProductController {
 	public List<Product> get() {
 		return ps.findAll();
 	}
+	
+	@GetMapping("/byName/{name}")
+	public List<Product> getByName(@PathVariable String name) {
+		return ps.findProductByNameLike("%"+name+"%");
+	}
+	
 
 	@GetMapping("/{id}")
 	public Product findbyId(@PathVariable int id) {

@@ -12,5 +12,8 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
 	@Query("from Review r where r.product.id=:id")
 	List<Review> findReviewsByProduct(int id);
+	
+	
+	List<Product> findProductByNameLike(String name);
 
 }

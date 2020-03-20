@@ -21,9 +21,17 @@ public class Order {
 	private int id;
 	private LocalDateTime date;
 	private double amount;
-	// @OneToOne(cascade = CascadeType.ALL)
-	// @JoinColumn(name="userId")
-	// private User user;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "userId")
+	private User user;
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	public int getId() {
 		return id;

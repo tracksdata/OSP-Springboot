@@ -2,7 +2,7 @@ package com.cts.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductDao extends JpaRepository<Product, String>{
+public interface ProductDao extends JpaRepository<Product, String>{ 
 	
 	/*
 	 *  1. Repository
