@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cts.email.service.EmailSenderService;
+import com.cts.order.entity.Order;
 
 @RestController
 @RequestMapping("/api")
@@ -15,9 +16,9 @@ public class EmailController {
 	private EmailSenderService es;
 	
 	@GetMapping
-	public String sendEmail() {
-		
-		return null;
+	public Order sendEmail() {
+		System.out.println("=====> Get orders");
+		return es.getOrder();
 	}
 
 }

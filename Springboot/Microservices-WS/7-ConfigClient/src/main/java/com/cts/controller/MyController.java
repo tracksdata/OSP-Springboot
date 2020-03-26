@@ -13,6 +13,10 @@ public class MyController {
 
 	@Value("${name}")
 	private String name;
+	
+	@Value("${email}")
+	private String email;
+
 
 	public void setName(String name) {
 		this.name = name;
@@ -20,8 +24,7 @@ public class MyController {
 
 	@GetMapping
 	public String getName() {
-
-		return name;
+		return "hello "+name+" your email is  "+email;
 	}
 
 }
