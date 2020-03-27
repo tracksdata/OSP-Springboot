@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class MyController {
 
-	@Value("${name}")
+	@Value("${name}") 
 	private String name;
 	
 	@Value("${email}")

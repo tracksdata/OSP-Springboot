@@ -13,14 +13,14 @@ import com.cts.product.dao.ProductPriceDao;
 @CrossOrigin
 @RequestMapping("/price")
 public class ProductPriceController {
-	
+
 	@Autowired
 	private ProductPriceDao prodPrice;
-	
+
 	@GetMapping("/get/{id}")
 	public Double getPrice(@PathVariable int id) {
-		Double price=prodPrice.getPrice(id);
-		System.out.println("======> Getting price from Port 2222 and  Price is  "+price +" <======");
+		Double price = prodPrice.getPrice(id);
+		System.out.println("======> Getting price from Port 2223 and Price is  " + price + " <======");
 		return prodPrice.getPrice(id);
 	}
 
